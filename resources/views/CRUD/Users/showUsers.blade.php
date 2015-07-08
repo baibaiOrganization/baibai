@@ -6,7 +6,7 @@
 
 @section('content')
 
-    @include('Complements.Users.message')
+    @include('Complements.messages.message')
     <p>Hay {{$users->lastPage()}} paginas</p>
     <p>Hay {{$users->total()}} registros</p>
     <p>Hay {{$users->count()}} registros</p>

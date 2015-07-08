@@ -9,8 +9,8 @@
 @section('content')
 
 
-    @include('Complements.Users.errors')
-    @include('Complements.Users.message')
+    @include('Complements.messages.errors')
+    @include('Complements.messages.message')
     {!! Form::open(['route'=>'createUser','method'=>'POST']) !!}
     @include('Complements.Users.fields')
     {!! Form::submit('Crear Usuario') !!}

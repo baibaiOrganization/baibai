@@ -9,8 +9,8 @@
 @section('content')
 
 
-    @include('Complements.Users.errors')
-    @include('Complements.Users.message')
+    @include('Complements.messages.errors')
+    @include('Complements.messages.message')
     {!! Form::model($user,['route'=>['updateUser',$user],'method'=>'POST']) !!}
     @include('Complements.Users.fields')
     {!! Form::submit('Actualizar Usuario') !!}

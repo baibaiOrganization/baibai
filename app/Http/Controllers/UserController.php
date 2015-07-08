@@ -25,7 +25,7 @@ class UserController extends Controller {
     public function saveUser(CreateUserRequest $request)
     {
         $user=User::create($request->all());
-        return Redirect::back();
+        return Redirect::back()->with('message','el usuario fue creado correctamente');
     }
 
     public function editUser($id)
@@ -40,7 +40,7 @@ class UserController extends Controller {
         $user=User::find($id);
         $user->fill($request->all());
         $user->save();
-        return Redirect::back();
+        return Redirect::back()->with('message','el usuario fue actualizado correctamente');
     }
 
     public function deleteUser($id){
